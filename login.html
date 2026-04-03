@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Login</h1>
+
+<input type="text" id="email" placeholder="Email"><br><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<script>
+function login() {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  if(email && password) {
+    localStorage.setItem("user", email);
+    alert("Login Successful");
+    window.location.href = "index.html";
+  } else {
+    alert("Enter details");
+  }
+}
+</script>
+
+</body>
+</html>

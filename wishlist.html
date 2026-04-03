@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wishlist</title>
+</head>
+<body>
+
+<h1>❤️ Wishlist</h1>
+<div id="items"></div>
+
+<script>
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+let html = "";
+wishlist.forEach(item => {
+  html += `<p>${item.name} - ₹${item.price}</p>`;
+});
+
+document.getElementById("items").innerHTML = html;
+</script>
+
+</body>
+</html>
